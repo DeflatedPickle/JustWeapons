@@ -18,18 +18,18 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemDagger extends Item {
+public class ItemWarAxe extends Item {
     private final float attackDamage;
     private final double attackSpeed;
     private final Item.ToolMaterial material;
 
-    public ItemDagger(Item.ToolMaterial material, String unlocalized, String registry){
+    public ItemWarAxe(Item.ToolMaterial material, String unlocalized, String registry){
         this.material = material;
         this.maxStackSize = 1;
-        this.setMaxDamage(material.getMaxUses() / 2);
+        this.setMaxDamage(material.getMaxUses() + (material.getMaxUses() / 2));
         this.setCreativeTab(CreativeTabs.COMBAT);
-        this.attackDamage = 0.5F + material.getDamageVsEntity();
-        this.attackSpeed = -1.0F;
+        this.attackDamage = 4.0F + material.getDamageVsEntity();
+        this.attackSpeed = -2.8F;
 
         setUnlocalizedName(unlocalized);
         setRegistryName(registry);
@@ -37,18 +37,6 @@ public class ItemDagger extends Item {
 
     public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
         stack.damageItem(1, attacker);
-
-        if (target.getHorizontalFacing().equals(attacker.getHorizontalFacing())){
-            // TODO: Improve backstabbing.
-            // System.out.println("Backstab!");
-
-            if (attacker instanceof EntityPlayer){
-                if (!((EntityPlayer) attacker).world.isRemote) {
-                    attacker.world.playSound(null, ((EntityPlayer) attacker).posX, ((EntityPlayer) attacker).posY, ((EntityPlayer) attacker).posZ, SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, SoundCategory.NEUTRAL, 1.0F, 1.0F);
-                }
-                ((EntityPlayer) attacker).addExperience(1);
-            }
-        }
 
         return true;
     }

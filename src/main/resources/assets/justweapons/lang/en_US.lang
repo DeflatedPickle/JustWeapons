@@ -1,5 +1,13 @@
+// Daggers
 item.daggerWood.name=Wooden Dagger
 item.daggerStone.name=Stone Dagger
 item.daggerIron.name=Iron Dagger
 item.daggerGold.name=Gold Dagger
 item.daggerDiamond.name=Diamond Dagger
+
+// War Axes
+item.waraxeWood.name=Wooden War Axe
+item.waraxeStone.name=Stone War Axe
+item.waraxeIron.name=Iron War Axe
+item.waraxeGold.name=Gold War Axe
+item.waraxeDiamond.name=Diamond War Axe
