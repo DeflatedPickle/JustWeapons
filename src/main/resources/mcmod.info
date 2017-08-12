@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "justweapons",
+    "name": "JustWeapons",
+    "description": "A Minecraft mod that adds some weapons.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "updateUrl": "",
+    "authorList": ["DeflatedPickle"],
+    "credits": "DeflatedPickle, Loremaster",
+    "url": "https://github.com/DeflatedPickle/JustWeapons",
+    "logoFile": "logo.png",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
