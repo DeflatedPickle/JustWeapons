@@ -15,18 +15,18 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemGreatsword extends Item {
+public class ItemWarhammer extends Item {
     private final float attackDamage;
     private final double attackSpeed;
     private final ToolMaterial material;
 
-    public ItemGreatsword(ToolMaterial material, String unlocalized, String registry){
+    public ItemWarhammer(ToolMaterial material, String unlocalized, String registry){
         this.material = material;
         this.maxStackSize = 1;
         this.setMaxDamage(material.getMaxUses() + (material.getMaxUses()));
         this.setCreativeTab(CreativeTabs.COMBAT);
-        this.attackDamage = 7.5F + material.getDamageVsEntity();
-        this.attackSpeed = -3.5F;
+        this.attackDamage = 9.0F + material.getDamageVsEntity();
+        this.attackSpeed = -3.7F;
 
         setUnlocalizedName(unlocalized);
         setRegistryName(registry);

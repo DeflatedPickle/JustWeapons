@@ -19,12 +19,26 @@ item.maceIron.name=Iron Mace
 item.maceGold.name=Gold Mace
 item.maceDiamond.name=Diamond Mace
 
+// Greatswords
+item.greatswordWood.name=Wooden Greatsword
+item.greatswordStone.name=Stone Greatsword
+item.greatswordIron.name=Iron Greatsword
+item.greatswordGold.name=Gold Greatsword
+item.greatswordDiamond.name=Diamond Greatsword
+
 // Battleaxes
 item.battleaxeWood.name=Wooden Battleaxe
 item.battleaxeStone.name=Stone Battleaxe
 item.battleaxeIron.name=Iron Battleaxe
 item.battleaxeGold.name=Gold Battleaxe
 item.battleaxeDiamond.name=Diamond Battleaxe
+
+// Warhammers
+item.warhammerWood.name=Wooden Warhammer
+item.warhammerStone.name=Stone Warhammer
+item.warhammerIron.name=Iron Warhammer
+item.warhammerGold.name=Gold Warhammer
+item.warhammerDiamond.name=Diamond Warhammer
 
 // Other
 item.longStick.name=Long Stick

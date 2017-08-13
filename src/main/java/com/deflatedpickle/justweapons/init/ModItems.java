@@ -42,6 +42,13 @@ public class ModItems {
     public static ItemBattleaxe GOLDEN_BATTLEAXE;
     public static ItemBattleaxe DIAMOND_BATTLEAXE;
 
+    // Warhammers
+    public static ItemWarhammer WOODEN_WARHAMMER;
+    public static ItemWarhammer STONE_WARHAMMER;
+    public static ItemWarhammer IRON_WARHAMMER;
+    public static ItemWarhammer GOLDEN_WARHAMMER;
+    public static ItemWarhammer DIAMOND_WARHAMMER;
+
     // Other
     public static Item STICK_LONG;
 
@@ -80,6 +87,13 @@ public class ModItems {
         IRON_BATTLEAXE = new ItemBattleaxe(Item.ToolMaterial.IRON, "battleaxeIron", "iron_battleaxe");
         GOLDEN_BATTLEAXE = new ItemBattleaxe(Item.ToolMaterial.GOLD, "battleaxeGold", "golden_battleaxe");
         DIAMOND_BATTLEAXE = new ItemBattleaxe(Item.ToolMaterial.DIAMOND, "battleaxeDiamond", "diamond_battleaxe");
+
+        // Battleaxe
+        WOODEN_WARHAMMER = new ItemWarhammer(Item.ToolMaterial.WOOD, "warhammerWood", "wooden_warhammer");
+        STONE_WARHAMMER = new ItemWarhammer(Item.ToolMaterial.STONE, "warhammerStone", "stone_warhammer");
+        IRON_WARHAMMER = new ItemWarhammer(Item.ToolMaterial.IRON, "warhammerIron", "iron_warhammer");
+        GOLDEN_WARHAMMER = new ItemWarhammer(Item.ToolMaterial.GOLD, "warhammerGold", "golden_warhammer");
+        DIAMOND_WARHAMMER = new ItemWarhammer(Item.ToolMaterial.DIAMOND, "warhammerDiamond", "diamond_warhammer");
 
         // Other
         STICK_LONG = new Item().setUnlocalizedName("longStick").setRegistryName("stick_long");
@@ -121,6 +135,13 @@ public class ModItems {
         GameRegistry.register(GOLDEN_BATTLEAXE);
         GameRegistry.register(DIAMOND_BATTLEAXE);
 
+        // Warhammers
+        GameRegistry.register(WOODEN_WARHAMMER);
+        GameRegistry.register(STONE_WARHAMMER);
+        GameRegistry.register(IRON_WARHAMMER);
+        GameRegistry.register(GOLDEN_WARHAMMER);
+        GameRegistry.register(DIAMOND_WARHAMMER);
+
         // Other
         GameRegistry.register(STICK_LONG);
     }
@@ -160,6 +181,13 @@ public class ModItems {
         registerRender(IRON_BATTLEAXE);
         registerRender(GOLDEN_BATTLEAXE);
         registerRender(DIAMOND_BATTLEAXE);
+
+        // Warhammers
+        registerRender(WOODEN_WARHAMMER);
+        registerRender(STONE_WARHAMMER);
+        registerRender(IRON_WARHAMMER);
+        registerRender(GOLDEN_WARHAMMER);
+        registerRender(DIAMOND_WARHAMMER);
 
         // Other
         registerRender(STICK_LONG);

@@ -34,11 +34,18 @@ public class ModCrafting {
         GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.DIAMOND_GREATSWORD, "M", "M", "S", 'M', "gemDiamond", 'S', "stickLong"));
 
         // Battleaxes
-        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.WOODEN_WARAXE, "MM ", "MSM", " S ", 'M', "plankWood", 'S', "stickLong"));
-        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.STONE_WARAXE, "MM ", "MSM", " S ", 'M', "cobblestone", 'S', "stickLong"));
-        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.IRON_WARAXE, "MM ", "MSM", " S ", 'M', "ingotIron", 'S', "stickLong"));
-        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.GOLDEN_WARAXE, "MM ", "MSM", " S ", 'M', "ingotGold", 'S', "stickLong"));
-        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.DIAMOND_WARAXE, "MM ", "MSM", " S ", 'M', "gemDiamond", 'S', "stickLong"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.WOODEN_BATTLEAXE, "MM ", "MSM", " S ", 'M', "plankWood", 'S', "stickLong"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.STONE_BATTLEAXE, "MM ", "MSM", " S ", 'M', "cobblestone", 'S', "stickLong"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.IRON_BATTLEAXE, "MM ", "MSM", " S ", 'M', "ingotIron", 'S', "stickLong"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.GOLDEN_BATTLEAXE, "MM ", "MSM", " S ", 'M', "ingotGold", 'S', "stickLong"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.DIAMOND_BATTLEAXE, "MM ", "MSM", " S ", 'M', "gemDiamond", 'S', "stickLong"));
+
+        // Warhammers
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.WOODEN_WARHAMMER, "MMM", "MSM", " S ", 'M', "plankWood", 'S', "stickLong"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.STONE_WARHAMMER, "MMM", "MSM", " S ", 'M', "cobblestone", 'S', "stickLong"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.IRON_WARHAMMER, "MMM", "MSM", " S ", 'M', "ingotIron", 'S', "stickLong"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.GOLDEN_WARHAMMER, "MMM", "MSM", " S ", 'M', "ingotGold", 'S', "stickLong"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.DIAMOND_WARHAMMER, "MMM", "MSM", " S ", 'M', "gemDiamond", 'S', "stickLong"));
 
         // Other
         GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.STICK_LONG, "S", "S", 'S', "stickWood"));
