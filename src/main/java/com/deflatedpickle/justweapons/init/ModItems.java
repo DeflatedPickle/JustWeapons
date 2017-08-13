@@ -1,5 +1,6 @@
 package com.deflatedpickle.justweapons.init;
 
+import com.deflatedpickle.justweapons.items.ItemBattleaxe;
 import com.deflatedpickle.justweapons.items.ItemDagger;
 import com.deflatedpickle.justweapons.items.ItemMace;
 import com.deflatedpickle.justweapons.items.ItemWarAxe;
@@ -30,6 +31,16 @@ public class ModItems {
     public static ItemMace GOLD_MACE;
     public static ItemMace DIAMOND_MACE;
 
+    // Battleaxe
+    public static ItemBattleaxe WOODEN_BATTLEAXE;
+    public static ItemBattleaxe STONE_BATTLEAXE;
+    public static ItemBattleaxe IRON_BATTLEAXE;
+    public static ItemBattleaxe GOLD_BATTLEAXE;
+    public static ItemBattleaxe DIAMOND_BATTLEAXE;
+
+    // Other
+    public static Item STICK_LONG;
+
     public static void init(){
         // Daggers
         WOODEN_DAGGER = new ItemDagger(Item.ToolMaterial.WOOD, "daggerWood", "wooden_dagger");
@@ -51,6 +62,16 @@ public class ModItems {
         IRON_MACE = new ItemMace(Item.ToolMaterial.IRON, "maceIron", "iron_mace");
         GOLD_MACE = new ItemMace(Item.ToolMaterial.GOLD, "maceGold", "gold_mace");
         DIAMOND_MACE = new ItemMace(Item.ToolMaterial.DIAMOND, "maceDiamond", "diamond_mace");
+
+        // Battleaxe
+        WOODEN_BATTLEAXE = new ItemBattleaxe(Item.ToolMaterial.WOOD, "battleaxeWood", "wooden_battleaxe");
+        STONE_BATTLEAXE = new ItemBattleaxe(Item.ToolMaterial.STONE, "battleaxeStone", "stone_battleaxe");
+        IRON_BATTLEAXE = new ItemBattleaxe(Item.ToolMaterial.IRON, "battleaxeIron", "iron_battleaxe");
+        GOLD_BATTLEAXE = new ItemBattleaxe(Item.ToolMaterial.GOLD, "battleaxeGold", "gold_battleaxe");
+        DIAMOND_BATTLEAXE = new ItemBattleaxe(Item.ToolMaterial.DIAMOND, "battleaxeDiamond", "diamond_battleaxe");
+
+        // Other
+        STICK_LONG = new Item().setUnlocalizedName("longStick").setRegistryName("stick_long");
     }
 
     public static void register(){
@@ -74,6 +95,16 @@ public class ModItems {
         GameRegistry.register(IRON_WARAXE);
         GameRegistry.register(GOLD_MACE);
         GameRegistry.register(DIAMOND_MACE);
+
+        // Battleaxe
+        GameRegistry.register(WOODEN_BATTLEAXE);
+        GameRegistry.register(STONE_BATTLEAXE);
+        GameRegistry.register(IRON_BATTLEAXE);
+        GameRegistry.register(GOLD_BATTLEAXE);
+        GameRegistry.register(DIAMOND_BATTLEAXE);
+
+        // Other
+        GameRegistry.register(STICK_LONG);
     }
 
     public static void registerRenders(){
@@ -97,6 +128,16 @@ public class ModItems {
         registerRender(IRON_MACE);
         registerRender(GOLD_MACE);
         registerRender(DIAMOND_MACE);
+
+        // Battleaxe
+        registerRender(WOODEN_BATTLEAXE);
+        registerRender(STONE_BATTLEAXE);
+        registerRender(IRON_BATTLEAXE);
+        registerRender(GOLD_BATTLEAXE);
+        registerRender(DIAMOND_BATTLEAXE);
+
+        // Other
+        registerRender(STICK_LONG);
     }
 
     private static void registerRender(Item item){

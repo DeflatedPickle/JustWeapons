@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.oredict.OreDictionary;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
 public class JustWeapons {
@@ -24,6 +25,8 @@ public class JustWeapons {
     public void preInit(FMLPreInitializationEvent event) {
         ModItems.init();
         ModItems.register();
+
+        OreDictionary.registerOre("stickLong", ModItems.STICK_LONG);
     }
 
     @EventHandler

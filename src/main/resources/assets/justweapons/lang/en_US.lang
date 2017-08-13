@@ -11,3 +11,20 @@ item.waraxeStone.name=Stone War Axe
 item.waraxeIron.name=Iron War Axe
 item.waraxeGold.name=Gold War Axe
 item.waraxeDiamond.name=Diamond War Axe
+
+// Maces
+item.maceWood.name=Wooden Mace
+item.maceStone.name=Stone Mace
+item.maceIron.name=Iron Mace
+item.maceGold.name=Gold Mace
+item.maceDiamond.name=Diamond Mace
+
+// Battleaxes
+item.battleaxeWood.name=Wooden Battleaxe
+item.battleaxeStone.name=Stone Battleaxe
+item.battleaxeIron.name=Iron Battleaxe
+item.battleaxeGold.name=Gold Battleaxe
+item.battleaxeDiamond.name=Diamond Battleaxe
+
+// Other
+item.longStick.name=Long Stick

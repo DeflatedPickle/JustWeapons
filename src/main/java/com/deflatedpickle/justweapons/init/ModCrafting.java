@@ -25,5 +25,15 @@ public class ModCrafting {
         GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.IRON_MACE, " MM", " SM", "S  ", 'M', "ingotIron", 'S', "stickWood"));
         GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.GOLD_MACE, " MM", " SM", "S  ", 'M', "ingotGold", 'S', "stickWood"));
         GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.DIAMOND_MACE, " MM", " SM", "S  ", 'M', "gemDiamond", 'S', "stickWood"));
+
+        // Battleaxe
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.WOODEN_WARAXE, "MM ", "MSM", " S ", 'M', "plankWood", 'S', "stickLong"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.STONE_WARAXE, "MM ", "MSM", " S ", 'M', "cobblestone", 'S', "stickLong"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.IRON_WARAXE, "MM ", "MSM", " S ", 'M', "ingotIron", 'S', "stickLong"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.GOLD_WARAXE, "MM ", "MSM", " S ", 'M', "ingotGold", 'S', "stickLong"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.DIAMOND_WARAXE, "MM ", "MSM", " S ", 'M', "gemDiamond", 'S', "stickLong"));
+
+        // Other
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.STICK_LONG, "S", "S", 'S', "stickWood"));
     }
 }
