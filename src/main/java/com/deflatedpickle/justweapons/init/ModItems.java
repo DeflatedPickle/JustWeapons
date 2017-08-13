@@ -1,6 +1,7 @@
 package com.deflatedpickle.justweapons.init;
 
 import com.deflatedpickle.justweapons.items.ItemDagger;
+import com.deflatedpickle.justweapons.items.ItemMace;
 import com.deflatedpickle.justweapons.items.ItemWarAxe;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -22,6 +23,13 @@ public class ModItems {
     public static ItemWarAxe GOLD_WARAXE;
     public static ItemWarAxe DIAMOND_WARAXE;
 
+    // Maces
+    public static ItemMace WOODEN_MACE;
+    public static ItemMace STONE_MACE;
+    public static ItemMace IRON_MACE;
+    public static ItemMace GOLD_MACE;
+    public static ItemMace DIAMOND_MACE;
+
     public static void init(){
         // Daggers
         WOODEN_DAGGER = new ItemDagger(Item.ToolMaterial.WOOD, "daggerWood", "wooden_dagger");
@@ -36,6 +44,13 @@ public class ModItems {
         IRON_WARAXE = new ItemWarAxe(Item.ToolMaterial.IRON, "waraxeIron", "iron_waraxe");
         GOLD_WARAXE = new ItemWarAxe(Item.ToolMaterial.GOLD, "waraxeGold", "gold_waraxe");
         DIAMOND_WARAXE = new ItemWarAxe(Item.ToolMaterial.DIAMOND, "waraxeDiamond", "diamond_waraxe");
+
+        // Maces
+        WOODEN_MACE = new ItemMace(Item.ToolMaterial.WOOD, "maceWood", "wooden_mace");
+        STONE_MACE = new ItemMace(Item.ToolMaterial.STONE, "maceStone", "stone_mace");
+        IRON_MACE = new ItemMace(Item.ToolMaterial.IRON, "maceIron", "iron_mace");
+        GOLD_MACE = new ItemMace(Item.ToolMaterial.GOLD, "maceGold", "gold_mace");
+        DIAMOND_MACE = new ItemMace(Item.ToolMaterial.DIAMOND, "maceDiamond", "diamond_mace");
     }
 
     public static void register(){
@@ -52,6 +67,13 @@ public class ModItems {
         GameRegistry.register(IRON_WARAXE);
         GameRegistry.register(GOLD_WARAXE);
         GameRegistry.register(DIAMOND_WARAXE);
+
+        // Maces
+        GameRegistry.register(WOODEN_MACE);
+        GameRegistry.register(STONE_MACE);
+        GameRegistry.register(IRON_WARAXE);
+        GameRegistry.register(GOLD_MACE);
+        GameRegistry.register(DIAMOND_MACE);
     }
 
     public static void registerRenders(){
@@ -68,6 +90,13 @@ public class ModItems {
         registerRender(IRON_WARAXE);
         registerRender(GOLD_WARAXE);
         registerRender(DIAMOND_WARAXE);
+
+        // Maces
+        registerRender(WOODEN_MACE);
+        registerRender(STONE_MACE);
+        registerRender(IRON_MACE);
+        registerRender(GOLD_MACE);
+        registerRender(DIAMOND_MACE);
     }
 
     private static void registerRender(Item item){
