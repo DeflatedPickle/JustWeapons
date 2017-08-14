@@ -1,5 +1,6 @@
 package com.deflatedpickle.justweapons.items;
 
+import com.deflatedpickle.justweapons.api.IReach;
 import com.google.common.collect.Multimap;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
@@ -18,7 +19,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemWarAxe extends Item {
+public class ItemWarAxe extends Item implements IReach {
     private final float attackDamage;
     private final double attackSpeed;
     private final Item.ToolMaterial material;
@@ -78,5 +79,10 @@ public class ItemWarAxe extends Item {
         }
 
         return multimap;
+    }
+
+    @Override
+    public float getReach(){
+        return 0.9F;
     }
 }
