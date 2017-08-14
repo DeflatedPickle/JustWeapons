@@ -7,8 +7,10 @@ import com.deflatedpickle.justweapons.items.ItemMace;
 import com.deflatedpickle.justweapons.items.ItemWarAxe;
 import com.deflatedpickle.justweapons.packets.MessageExtendedReachAttack;
 import net.minecraft.client.Minecraft;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
@@ -27,11 +29,18 @@ public class ForgeEventHandler {
     @SubscribeEvent
     public void onLivingHurtEvent(LivingHurtEvent event){
         EntityLivingBase entity = (EntityLivingBase) event.getEntity();
-        EntityLivingBase player = (EntityLivingBase) event.getSource().getSourceOfDamage();
-        Item heldItem = ((EntityLivingBase) event.getSource().getSourceOfDamage()).getHeldItemMainhand().getItem();
+        Entity damageSource = event.getSource().getSourceOfDamage();
+
+        Item heldItem;
+        if (damageSource instanceof EntityThrowable) {
+            heldItem = ((EntityThrowable) event.getSource().getSourceOfDamage()).getThrower().getHeldItemMainhand().getItem();
+        }
+        else{
+            heldItem = ((EntityLivingBase) event.getSource().getSourceOfDamage()).getHeldItemMainhand().getItem();
+        }
 
         if (heldItem instanceof ItemDagger) {
-            if (event.getSource().getSourceOfDamage().isSneaking() && entity.getHorizontalFacing().equals(player.getHorizontalFacing())) {
+            if (event.getSource().getSourceOfDamage().isSneaking() && entity.getHorizontalFacing().equals(damageSource.getHorizontalFacing())) {
                 event.setAmount(event.getAmount() + 4);
             }
         }
@@ -46,8 +55,8 @@ public class ForgeEventHandler {
     }
 
     @SideOnly(Side.CLIENT)
-    @SubscribeEvent(priority= EventPriority.NORMAL, receiveCanceled=true)
-    public void onEvent(MouseEvent event)
+    @SubscribeEvent(priority=EventPriority.NORMAL, receiveCanceled=true)
+    public void onMouseEvent(MouseEvent event)
     {
         if (event.getButton() == 0 && event.isButtonstate())
         {
