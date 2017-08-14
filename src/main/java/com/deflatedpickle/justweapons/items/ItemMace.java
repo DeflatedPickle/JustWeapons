@@ -19,9 +19,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ItemMace extends Item implements IReach {
     private final float attackDamage;
     private final double attackSpeed;
-    private final ToolMaterial material;
+    private final Item.ToolMaterial material;
 
-    public ItemMace(ToolMaterial material, String unlocalized, String registry){
+    public ItemMace(Item.ToolMaterial material, String unlocalized, String registry){
         this.material = material;
         this.maxStackSize = 1;
         this.setMaxDamage(material.getMaxUses() + ((material.getMaxUses() / 2) * 2));
