@@ -49,6 +49,9 @@ public class ModItems {
     public static ItemWarhammer GOLDEN_WARHAMMER;
     public static ItemWarhammer DIAMOND_WARHAMMER;
 
+    // Knives
+    public static ItemKnife WOODEN_KNIFE;
+
     // Other
     public static Item STICK_LONG;
 
@@ -94,6 +97,10 @@ public class ModItems {
         IRON_WARHAMMER = new ItemWarhammer(Item.ToolMaterial.IRON, "warhammerIron", "iron_warhammer");
         GOLDEN_WARHAMMER = new ItemWarhammer(Item.ToolMaterial.GOLD, "warhammerGold", "golden_warhammer");
         DIAMOND_WARHAMMER = new ItemWarhammer(Item.ToolMaterial.DIAMOND, "warhammerDiamond", "diamond_warhammer");
+
+        // Knives
+        WOODEN_KNIFE = new ItemKnife(Item.ToolMaterial.WOOD, "knifeWood", "wooden_knife");
+
 
         // Other
         STICK_LONG = new Item().setUnlocalizedName("longStick").setRegistryName("stick_long");
@@ -142,6 +149,9 @@ public class ModItems {
         GameRegistry.register(GOLDEN_WARHAMMER);
         GameRegistry.register(DIAMOND_WARHAMMER);
 
+        // Knives
+        GameRegistry.register(WOODEN_KNIFE);
+
         // Other
         GameRegistry.register(STICK_LONG);
     }
@@ -188,6 +198,9 @@ public class ModItems {
         registerRender(IRON_WARHAMMER);
         registerRender(GOLDEN_WARHAMMER);
         registerRender(DIAMOND_WARHAMMER);
+
+        // Knives
+        registerRender(WOODEN_KNIFE);
 
         // Other
         registerRender(STICK_LONG);
