@@ -1,6 +1,7 @@
 package com.deflatedpickle.justweapons.items;
 
 import com.deflatedpickle.justweapons.api.IReach;
+import com.deflatedpickle.justweapons.util.SharedAttributes;
 import com.google.common.collect.Multimap;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
@@ -73,6 +74,8 @@ public class ItemGreatsword extends Item implements IReach {
         if (equipmentSlot == EntityEquipmentSlot.MAINHAND) {
             multimap.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(), new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Weapon modifier", (double)this.attackDamage, 0));
             multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), new AttributeModifier(ATTACK_SPEED_MODIFIER, "Weapon modifier", this.attackSpeed, 0));
+
+            multimap.put(SharedAttributes.ATTACK_RANGE.getName(), new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Weapon modifier", (double)this.getReach(), 0));
         }
 
         return multimap;

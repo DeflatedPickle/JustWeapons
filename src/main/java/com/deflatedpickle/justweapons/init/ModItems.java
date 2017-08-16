@@ -51,6 +51,10 @@ public class ModItems {
 
     // Knives
     public static ItemKnife WOODEN_KNIFE;
+    public static ItemKnife STONE_KNIFE;
+    public static ItemKnife IRON_KNIFE;
+    public static ItemKnife GOLDEN_KNIFE;
+    public static ItemKnife DIAMOND_KNIFE;
 
     // Other
     public static Item STICK_LONG;
@@ -100,6 +104,10 @@ public class ModItems {
 
         // Knives
         WOODEN_KNIFE = new ItemKnife(Item.ToolMaterial.WOOD, "knifeWood", "wooden_knife");
+        STONE_KNIFE = new ItemKnife(Item.ToolMaterial.STONE, "knifeStone", "stone_knife");
+        IRON_KNIFE = new ItemKnife(Item.ToolMaterial.IRON, "knifeIron", "iron_knife");
+        GOLDEN_KNIFE = new ItemKnife(Item.ToolMaterial.GOLD, "knifeGold", "golden_knife");
+        DIAMOND_KNIFE = new ItemKnife(Item.ToolMaterial.DIAMOND, "knifeDiamond", "diamond_knife");
 
 
         // Other
@@ -124,7 +132,7 @@ public class ModItems {
         // Maces
         GameRegistry.register(WOODEN_MACE);
         GameRegistry.register(STONE_MACE);
-        GameRegistry.register(IRON_WARAXE);
+        GameRegistry.register(IRON_MACE);
         GameRegistry.register(GOLDEN_MACE);
         GameRegistry.register(DIAMOND_MACE);
 
@@ -151,6 +159,10 @@ public class ModItems {
 
         // Knives
         GameRegistry.register(WOODEN_KNIFE);
+        GameRegistry.register(STONE_KNIFE);
+        GameRegistry.register(IRON_KNIFE);
+        GameRegistry.register(GOLDEN_KNIFE);
+        GameRegistry.register(DIAMOND_KNIFE);
 
         // Other
         GameRegistry.register(STICK_LONG);
@@ -201,6 +213,10 @@ public class ModItems {
 
         // Knives
         registerRender(WOODEN_KNIFE);
+        registerRender(STONE_KNIFE);
+        registerRender(IRON_KNIFE);
+        registerRender(GOLDEN_KNIFE);
+        registerRender(DIAMOND_KNIFE);
 
         // Other
         registerRender(STICK_LONG);

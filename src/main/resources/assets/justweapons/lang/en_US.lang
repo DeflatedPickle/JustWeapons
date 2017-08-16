@@ -1,44 +1,56 @@
-// Daggers
+// Items
+    // Daggers
 item.daggerWood.name=Wooden Dagger
 item.daggerStone.name=Stone Dagger
 item.daggerIron.name=Iron Dagger
 item.daggerGold.name=Gold Dagger
 item.daggerDiamond.name=Diamond Dagger
 
-// War Axes
+    // War Axes
 item.waraxeWood.name=Wooden War Axe
 item.waraxeStone.name=Stone War Axe
 item.waraxeIron.name=Iron War Axe
 item.waraxeGold.name=Gold War Axe
 item.waraxeDiamond.name=Diamond War Axe
 
-// Maces
+    // Maces
 item.maceWood.name=Wooden Mace
 item.maceStone.name=Stone Mace
 item.maceIron.name=Iron Mace
 item.maceGold.name=Gold Mace
 item.maceDiamond.name=Diamond Mace
 
-// Greatswords
+    // Greatswords
 item.greatswordWood.name=Wooden Greatsword
 item.greatswordStone.name=Stone Greatsword
 item.greatswordIron.name=Iron Greatsword
 item.greatswordGold.name=Gold Greatsword
 item.greatswordDiamond.name=Diamond Greatsword
 
-// Battleaxes
+    // Battleaxes
 item.battleaxeWood.name=Wooden Battleaxe
 item.battleaxeStone.name=Stone Battleaxe
 item.battleaxeIron.name=Iron Battleaxe
 item.battleaxeGold.name=Gold Battleaxe
 item.battleaxeDiamond.name=Diamond Battleaxe
 
-// Warhammers
+    // Warhammers
 item.warhammerWood.name=Wooden Warhammer
 item.warhammerStone.name=Stone Warhammer
 item.warhammerIron.name=Iron Warhammer
 item.warhammerGold.name=Gold Warhammer
 item.warhammerDiamond.name=Diamond Warhammer
 
-// Other
+    // Knives
+item.knifeWood.name=Wooden Knife
+item.knifeStone.name=Stone Knife
+item.knifeIron.name=Iron Knife
+item.knifeGold.name=Gold Knife
+item.knifeDiamond.name=Diamond Knife
+
+    // Other
 item.longStick.name=Long Stick
+
+// Attributes
+attribute.name.generic.attackRange=Attack Range
+attribute.name.generic.thrownDamage=Thrown Damage

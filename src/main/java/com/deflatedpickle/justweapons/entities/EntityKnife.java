@@ -13,18 +13,22 @@ import net.minecraft.world.World;
 
 public class EntityKnife extends EntityThrowable {
     private Item thrownItem;
+    private final float attackDamage;
 
     public EntityKnife(World worldIn) {
         super(worldIn);
+        this.attackDamage = 0;
     }
 
-    public EntityKnife(World worldIn, EntityLivingBase throwerIn, Item thrownItem) {
+    public EntityKnife(World worldIn, EntityLivingBase throwerIn, Item thrownItem, Float attackDamage) {
         super(worldIn, throwerIn);
         this.thrownItem = thrownItem;
+        this.attackDamage = attackDamage;
     }
 
     public EntityKnife(World worldIn, double x, double y, double z) {
         super(worldIn, x, y, z);
+        this.attackDamage = 0;
     }
 
     public static void registerFixesKnife(DataFixer fixer) {
@@ -38,8 +42,7 @@ public class EntityKnife extends EntityThrowable {
                 position = result.getBlockPos();
                 break;
             case ENTITY:
-                float i = 2.0F;
-                result.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), i);
+                result.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), this.attackDamage);
                 position = result.entityHit.getPosition();
                 break;
             default:

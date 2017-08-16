@@ -2,6 +2,7 @@ package com.deflatedpickle.justweapons.items;
 
 import com.deflatedpickle.justweapons.api.IReach;
 import com.deflatedpickle.justweapons.entities.EntityKnife;
+import com.deflatedpickle.justweapons.util.SharedAttributes;
 import com.google.common.collect.Multimap;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
@@ -27,14 +28,16 @@ public class ItemKnife extends Item implements IReach {
     private final float attackDamage;
     private final double attackSpeed;
     private final Item.ToolMaterial material;
+    private final float thrownDamage;
 
     public ItemKnife(Item.ToolMaterial material, String unlocalized, String registry) {
         this.material = material;
         this.maxStackSize = 6;
         this.setMaxDamage(material.getMaxUses());
         this.setCreativeTab(CreativeTabs.COMBAT);
-        this.attackDamage = 0.3F + material.getDamageVsEntity();
+        this.attackDamage = 0.2F + material.getDamageVsEntity() / 3 * 2;
         this.attackSpeed = -1.5F;
+        this.thrownDamage = this.attackDamage * 2;
 
         setUnlocalizedName(unlocalized);
         setRegistryName(registry);
@@ -50,7 +53,7 @@ public class ItemKnife extends Item implements IReach {
         worldIn.playSound(null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.ENTITY_SNOWBALL_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
 
         if (!worldIn.isRemote) {
-            EntityKnife entity = new EntityKnife(worldIn, playerIn, this);
+            EntityKnife entity = new EntityKnife(worldIn, playerIn, this, this.thrownDamage);
             entity.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.5F, 1.0F);
             worldIn.spawnEntity(entity);
         }
@@ -94,6 +97,9 @@ public class ItemKnife extends Item implements IReach {
         if (equipmentSlot == EntityEquipmentSlot.MAINHAND) {
             multimap.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(), new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Weapon modifier", (double)this.attackDamage, 0));
             multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), new AttributeModifier(ATTACK_SPEED_MODIFIER, "Weapon modifier", this.attackSpeed, 0));
+
+            multimap.put(SharedAttributes.THROWN_DAMAGE.getName(), new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Weapon modifier", (double)this.thrownDamage, 0));
+            multimap.put(SharedAttributes.ATTACK_RANGE.getName(), new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Weapon modifier", (double)this.getReach(), 0));
         }
 
         return multimap;
