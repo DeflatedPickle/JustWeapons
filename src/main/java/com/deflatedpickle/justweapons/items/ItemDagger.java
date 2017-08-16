@@ -98,6 +98,6 @@ public class ItemDagger extends Item implements IReach {
 
     @Override
     public float getReach(){
-        return 0.7F;
+        return 1.0F;
     }
 }

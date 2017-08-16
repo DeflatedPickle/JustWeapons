@@ -47,6 +47,13 @@ public class ModCrafting {
         GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.GOLDEN_WARHAMMER, "MMM", "MSM", " S ", 'M', "ingotGold", 'S', "stickLong"));
         GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.DIAMOND_WARHAMMER, "MMM", "MSM", " S ", 'M', "gemDiamond", 'S', "stickLong"));
 
+        // Knives
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.WOODEN_KNIFE, "   ", " M ", "S  ", 'M', "plankWood", 'S', "stickWood"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.STONE_KNIFE, "   ", " M ", "S  ", 'M', "cobblestone", 'S', "stickWood"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.IRON_KNIFE, "   ", " M ", "S  ", 'M', "ingotIron", 'S', "stickWood"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.GOLDEN_KNIFE, "   ", " M ", "S  ", 'M', "ingotGold", 'S', "stickWood"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.DIAMOND_KNIFE, "   ", " M ", "S  ", 'M', "gemDiamond", 'S', "stickWood"));
+
         // Other
         GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.STICK_LONG, "S", "S", 'S', "stickWood"));
     }
